@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kolosalon</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css" integrity="sha384-zCbKRCUGaJDkqS1kPbPd7TveP5iyJE0EjAuZQTgFLD2ylzuqKfdKlfG/eSrtxUkn" crossorigin="anonymous">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="kozelska_jq.js"> </script>
+    <style>
+        body {
+            background-color: cadetblue;
+            font-size: 20px;
+        }
+    </style>
+</head>
+
+<body>
+    <section id="formular" class="container bg-white border border-dark rounded shadow mt-5">
+    <fieldset class="m-5">
+        <legend>
+            <h1>Pujcovna kol - objednavka:</h1>
+        </legend>
+        <form>
+            <input type="checkbox" name="kola[]" id="horske" clas="typ_kola" value="500">
+            <label for="horske">Horske kolo 500Kc/den</label>&nbsp;&nbsp;&nbsp;&nbsp;
+            <label for="hr_kusy">kusu: </label>&nbsp;&nbsp;<input type="text" size="3" id="hr_kusy" value=""><br>
+
+            <input type="checkbox" name="kola[]" id="detske" clas="typ_kola" value="200">
+            <label for="horske">Detske kolo 200Kc/den</label>&nbsp;&nbsp;&nbsp;&nbsp;
+            <label for="dt_kusy">kusu: </label>&nbsp;&nbsp;<input type="text" size="3" id="dt_kusy" value=""><br>
+
+            <input type="checkbox" name="kola[]" id="silnicni" clas="typ_kola" value="1500">
+            <label for="silnicni">Silnicni kolo 1500Kc/den</label>&nbsp;&nbsp;
+            <label for="sl_kusy">kusu: </label>&nbsp;&nbsp;<input type="text" size="3" id="sl_kusy" value=""><br>
+
+            <input type="checkbox" name="kola[]" id="gravel" clas="typ_kola" value="2500">
+            <label for="gravel">Gravel kolo 200Kc/den</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <label for="gr_kusy">kusu: </label>&nbsp;&nbsp;<input type="text" size="3" id="gr_kusy" value=""><br>
+        </form><br>
+        <h3>Delka zapujceni</h3>
+        <form>
+            <select id="doba">
+                <option value="3">3 dny</option>
+                <option value="5">5 dnu</option>
+                <option value="14">14 dni</option>
+                <option value="30">mesic</option>
+            </select>
+        </form><br>
+        <h3>Cyklo nosice</h3>
+        <form name="cyklonosic">
+            <input type="radio" name="nosic1" class="strasni" value="0.05">
+            <label for="stresni">Cyklonosic na strechu auta</label><br>
+
+            <input type="radio" name="nosic1" class="tazne" value="0.1">
+            <label for="tazne">Cyklonosic na tazne zarizeni auta</label><br>
+
+            <input type="radio" name="nosic1" class="zadne" value="0">
+            <label for="zadne">Neni treba cyklo nosic</label><br>
+        </form>
+        <hr><br>
+        <form>
+            <input type="button" class="btn btn-info" value="Spocitej" id="spocitej">
+            <input type="text" name="celkem" id="suma" readonly>
+            <label for="suma">Cena celkem</label>
+            <br><br>
+            <label for="kolikDa">Kolik jste ochoten zaplatit?</label>
+            <input type="text" name="kolikDa" id="overNabidku">
+            <input type="button" class="btn btn-info" id="overit" value="Ověřit">
+            <br><br>
+            <input type="text" id="isOK" readonly placeholder="Pole ověří nabídku">
+            <br><br>
+            <form action="" id="kontakt">
+                <label for="email">Vas kontaktni email: </label>&nbsp;&nbsp;<input type="email" required size="30"
+                    placeholder="victor.igo@gmail.com">
+                <button type="submit" class="btn btn-info">Odeslat</button>
+            </form>
+    </fieldset>
+</section>
+
+</body>
+
+</html>
